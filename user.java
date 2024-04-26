@@ -1,15 +1,19 @@
 public class user extends character{
+    sword weapon;
     public user(){
-        super(health, maxHealth, critChance, critDamage, damage);
+        super();
         name="Him";
     }
 
-    public user(String n, int mh, int d, int cd, int cc){
-        super(health, maxHealth, name, critChance, critDamage, damage);
+    public user(String n, int mh, int d, double cd, int cc){
+        super(n, mh, d, cd, cc);
     }
-    
 
+    public void setWeapon(sword w){
+        weapon =w;
+    }
 
-
-
+    public sword getWeapon(){
+        return weapon;
+    }
 }

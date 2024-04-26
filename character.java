@@ -1,27 +1,28 @@
 public class character{
-    private int health;
-    private int damage;
-    private int maxHealth;
-    private int critDamage;
-    private int critChance;
-    private String name;
+    
+    int health;
+    int damage;
+    int maxHealth;
+    double critDamage;
+    double critChance;
+    String name;
 
     public character(){
         name="Bob";
-        health=20
+        health=20;
         maxHealth=20;
-        critChance=10;
-        critDamage=50;
+        critChance=0.1;
+        critDamage=0.5;
         damage=2;
     }
 
-    public character(String n, int mh, int d, int cd, int cc){
+    public character(String n, int mh, int d, double cd, double cc){
         name=n;
         maxHealth=mh;
         health=mh;
         damage=d;
         critDamage=cd;
-        critChange=cc;
+        critChance=cc;
     }
 
     public void setHealth(int h){
@@ -29,7 +30,7 @@ public class character{
             health=h;
         }
         else{
-            System.out.println("Error, health cannot be set above max health.")
+            health=maxHealth;
         }
     }
 
@@ -37,7 +38,7 @@ public class character{
         maxHealth=h;
     }
 
-    public void setCritDamage(int c){
+    public void setCritDamage(double c){
         critDamage=c;
     }
 
@@ -46,7 +47,7 @@ public class character{
             critChance=c;
         }
         else{
-            System.out.println("Error, crit chance cannot be above 100%")
+            critChance=100;
         }
     }
 
@@ -66,12 +67,12 @@ public class character{
         return maxHealth;
     }
 
-    public int getCritDamage(){
+    public double getCritDamage(){
         return critDamage;
     }
 
-    public int getCritChance(){
-        return critChange;
+    public double getCritChance(){
+        return critChance;
     }
 
     public int getDamage(){
@@ -80,5 +81,14 @@ public class character{
 
     public String getName(){
         return name;
+    }
+
+    @Override
+    public String toString(){
+        return "Name: "+name+"\nMax Health: "+maxHealth+"\nHealth: "+health+"\nDamage: "+damage+"\nCrit Damage: "+critDamage+"\nCrit Chance: "+critChance;
+    }
+
+    public int punch(){
+        return damage;
     }
 }
