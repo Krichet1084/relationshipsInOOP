@@ -1,8 +1,8 @@
 public class rectangle extends square{
-    private int side2;
+    int side2;
 
     public rectangle(){
-        super(s1);
+        super();
         side2=5;
     }
 
@@ -11,12 +11,12 @@ public class rectangle extends square{
         side2=s2;
     }
 
-    public getArea(){
-        return s1*s2;
+    public int getArea(){
+        return side1*side2;
     }
 
-    public getPerimeter(){
-        return (s1*2)+(s2*2);
+    public int getPerimeter(){
+        return (side1*2)+(side2*2);
     }
 
     public int getSide2(){

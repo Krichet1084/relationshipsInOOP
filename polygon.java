@@ -1,8 +1,8 @@
 public class polygon{
-    private int side1;
+    int side1;
     
     public polygon(){
-        side1=10
+        side1=10;
     }
 
     public polygon(int s1){

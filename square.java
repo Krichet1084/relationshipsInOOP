@@ -8,10 +8,10 @@ public class square extends polygon{
     }
     
     public int getArea(){
-        return s1*s1;
+        return side1*side1;
     }
 
     public int getPerimeter(){
-        return s1*4;
+        return side1*4;
     }
 }

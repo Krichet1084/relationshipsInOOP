@@ -1,8 +1,8 @@
 public class triangle extends polygon{
-    private int side2;
-    private int side3;
-    private int height;
-    private int base;
+    int side2;
+    int side3;
+    int height;
+    int base;
 
     public triangle(){
         side1=3;
