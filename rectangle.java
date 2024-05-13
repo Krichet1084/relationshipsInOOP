@@ -27,4 +27,7 @@ public class rectangle extends square{
         side2=s2;
     }
 
+    public String toString(){
+        return "Side 1: +"+side1+"\nSide 2: "+side2"+"\nArea: "+getArea()+"\nPerimeter: "+getPerimeter();
+    }
 }

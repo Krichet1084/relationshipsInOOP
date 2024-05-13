@@ -14,4 +14,8 @@ public class square extends polygon{
     public int getPerimeter(){
         return side1*4;
     }
+
+    public String toString(){
+        return "Side 1-4: +"+side1+getArea()+"\nPerimeter: "+getPerimeter();
+    }
 }

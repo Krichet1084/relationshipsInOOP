@@ -28,5 +28,7 @@ public class triangle extends polygon{
         return side1+side2+side3;
     }
 
-
+    public String toString(){
+        return "Side 1: +"+side1+"\nSide 2: "+side2+"\nSide 3: "+side3+"\nArea: "+getArea()+"\nPerimeter: "+getPerimeter();
+    }
 }
